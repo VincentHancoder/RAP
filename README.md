@@ -29,7 +29,7 @@ exercises summarization, visual design and code implementation at once. **RAP** 
 |---|---|
 | Dataset RAP-25K (posters, papers, templates, annotations) + RAP-150 assets | `VincentHancoder/RAP` on Hugging Face (dataset) |
 | Model RAP-Qwen3.8-27B-RL | `VincentHancoder/RAP-Qwen3.8-27B-RL` on Hugging Face |
-| Online demo | `VincentHancoder/RAP` Space on Hugging Face |
+| Online demo (five RAP-150 cases reproducible with one click, or your own PDF) | `VincentHancoder/RAP` Space on Hugging Face |
 
 ## Repository layout
 
