@@ -2,8 +2,24 @@
 
 # RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars
 
-**Reconstruct A Poster** — 25K+ verified paper–poster pairs, every poster derendered into editable HTML,
-and two ways to turn a paper into a poster: retrieval-augmented generation and a post-trained 27B VLM.
+[Haonan Han](https://scholar.google.com/citations?user=vLZp870AAAAJ&hl=en)<sup>1,2</sup> ·
+[Yukang Lin](https://scholar.google.com/citations?user=DBt1fHQAAAAJ&hl=en)<sup>1</sup> ·
+[Minliang Lin](https://scholar.google.com/citations?user=5T7Sqt0AAAAJ&hl=en&oi=ao)<sup>2</sup> ·
+Haoxian Tan<sup>2</sup> ·
+[Jun-Yan He](https://scholar.google.com/citations?user=bjNZqGAAAAAJ&hl=en)<sup>2 ∗</sup> ·
+[Rui Yang](https://scholar.google.com/citations?user=Bi7e6bIAAAAJ&hl=en)<sup>3</sup> ·
+[Zhi-Qi Cheng](https://scholar.google.com/citations?user=uB2He2UAAAAJ&hl=en)<sup>4</sup> ·
+[Jie Hu](https://scholar.google.com/citations?user=DAJdHnkAAAAJ&hl=en)<sup>2</sup> ·
+[Guanglu Wan](https://scholar.google.com/citations?user=NRG_hpYAAAAJ&hl=en&oi=ao)<sup>2</sup> ·
+[Xiu Li](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=en)<sup>1 †</sup>
+
+<sup>1</sup> Tsinghua University &nbsp; <sup>2</sup> Meituan Longcat &nbsp; <sup>3</sup> The University of Hong Kong &nbsp; <sup>4</sup> University of Washington
+<br><sup>∗</sup> Project lead &nbsp; <sup>†</sup> Corresponding author
+
+[![Dataset](https://img.shields.io/badge/Dataset-RAP--25K-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/VincentHancoder/RAP)
+[![Model](https://img.shields.io/badge/Model-RAP--Qwen3.8--27B--RL-FF9D00?logo=huggingface&logoColor=000)](https://huggingface.co/VincentHancoder/RAP-Qwen3.8-27B-RL)
+[![Demo](https://img.shields.io/badge/Demo-Hugging%20Face%20Space-blue?logo=huggingface&logoColor=fff)](https://huggingface.co/spaces/VincentHancoder/RAP)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 <img src="figures/teaser.png" width="100%" alt="RAP overview: dataset, poster derendering, data applications">
 
@@ -25,12 +41,6 @@ exercises summarization, visual design and code implementation at once. **RAP** 
 - **RAP-Qwen3.8-27B-RL** — Qwen3.8-27B post-trained on the triplets with full-parameter SFT and GRPO.
 - **RAP-150** — the held-out benchmark: 150 papers, 10 per domain, with the exact model inputs used in the paper.
 
-| Resource | Where |
-|---|---|
-| Dataset RAP-25K (posters, papers, templates, annotations) + RAP-150 assets | `VincentHancoder/RAP` on Hugging Face (dataset) |
-| Model RAP-Qwen3.8-27B-RL | `VincentHancoder/RAP-Qwen3.8-27B-RL` on Hugging Face |
-| Online demo (five RAP-150 cases reproducible with one click, or your own PDF) | `VincentHancoder/RAP` Space on Hugging Face |
-
 ## Repository layout
 
 | Folder | What it does | Entry point |
@@ -41,11 +51,10 @@ exercises summarization, visual design and code implementation at once. **RAP** 
 | [`benchmark/rap_test150/`](benchmark/rap_test150/) | The 150 benchmark prompts with thumbnails, ids and metadata | — |
 | [`figures/`](figures/), [`docs/`](docs/) | Paper figures used here; third-party notices | — |
 
-No training code is included; the released checkpoint is the model used in the paper.
 
 ## RAP-25K
 
-<img src="figures/poster_wall.jpg" width="100%" alt="Human-crafted posters in RAP-25K">
+<img src="figures/rap25k_wall.gif" width="100%" alt="Human-crafted posters in RAP-25K">
 
 | Conference | 2022 | 2023 | 2024 | 2025 | 2026 | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -109,10 +118,17 @@ The benchmark inputs and how they were constructed: [`benchmark/rap_test150/READ
 
 ## License
 
-Our code is released under the MIT License. Third-party components keep their own licenses — in particular the
-LayoutLMv3 layout detector vendored from PDF-Extract-Kit (AGPL-3.0) and Paper2Poster components used by PosterRAG;
-see [`docs/THIRD_PARTY_NOTICES.md`](docs/THIRD_PARTY_NOTICES.md). Posters and papers in RAP-25K remain the
-copyright of their authors and venues and are redistributed for research purposes with their original URLs.
+This project is released under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+RAP builds on [LayoutLMv3](https://github.com/microsoft/unilm/tree/master/layoutlmv3) and
+[PDF-Extract-Kit](https://github.com/opendatalab/PDF-Extract-Kit) for layout detection,
+[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) for text recognition,
+[Paper2Poster](https://github.com/Paper2Poster/Paper2Poster) and [Docling](https://github.com/docling-project/docling)
+for paper parsing and template filling, [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) as the base model,
+[ms-swift](https://github.com/modelscope/ms-swift) for post-training, and [Playwright](https://github.com/microsoft/playwright)
+for rendering. Third-party licenses are listed in [`docs/THIRD_PARTY_NOTICES.md`](docs/THIRD_PARTY_NOTICES.md).
 
 ## Citation
 
