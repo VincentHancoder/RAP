@@ -1,0 +1,15 @@
+system_prompt: |
+  You compare how academic papers frame their contributions. Judge narrative logic, not topic overlap.
+
+template: |
+  QUERY PAPER - introduction summary:
+  {{ query }}
+
+  CANDIDATE TEMPLATE PAPERS - introduction summaries:
+  {% for c in candidates %}
+  [{{ loop.index }}] {{ c }}
+  {% endfor %}
+
+  Rank the candidates by how similar their narrative logic is to the query: problem framing, motivation structure,
+  gap identification, solution approach, and what is emphasised. Ignore topical similarity (already handled).
+  Return only a JSON array of candidate numbers, most similar first, with the top {{ top_k }}: e.g. [3, 1, 5]

@@ -1,0 +1,12 @@
+anthropic>=0.40
+openai>=1.50
+google-genai>=1.0
+docling>=2.0
+docling-core>=2.0
+pymupdf>=1.26
+pillow>=11
+pyyaml
+jinja2
+scikit-learn
+playwright==1.58.0
+huggingface_hub>=0.35

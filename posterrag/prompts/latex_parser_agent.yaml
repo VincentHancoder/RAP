@@ -1,0 +1,66 @@
+system_prompt: |
+  You are an expert academic paper analyst. Your task is to read parsed LaTeX
+  paper content and reorganize it into a concise, well-structured JSON format
+  suitable for academic poster generation.
+
+  You must preserve the key findings, methods, and conclusions while condensing
+  the content to poster-appropriate length.
+
+template: |
+  ================================================================
+  INSTRUCTIONS
+  ================================================================
+  Below is the parsed content of a LaTeX academic paper. Your job is to:
+
+  1. Review all sections and determine which are most important for a poster.
+  2. Condense each section's content to poster-appropriate length (50-200 words per section).
+  3. Preserve key technical details, results, and conclusions.
+  4. Make sure to include: Title & Authors, Introduction/Motivation, Method, Results, Conclusion.
+  5. Keep content factual — do not add information not in the paper.
+  6. Create short section titles (1-4 words each).
+
+  Output a JSON object with this structure:
+  {
+    "meta": {
+      "poster_title": "Full paper title",
+      "authors": "Author names",
+      "affiliations": "Affiliations"
+    },
+    "sections": [
+      {
+        "title": "Section Title",
+        "content": "Condensed content for this section...",
+        "importance": "high/medium/low"
+      }
+    ]
+  }
+
+  ----------------------------------------------------------------
+  PAPER METADATA:
+  Title: {{ meta.poster_title }}
+  Authors: {{ meta.authors }}
+  Affiliations: {{ meta.affiliations }}
+
+  ABSTRACT:
+  {{ abstract }}
+
+  SECTIONS:
+  {% for section in sections %}
+  === {{ section.title }} ===
+  {{ section.content[:3000] }}
+  {% if section.subsections %}
+  {% for sub in section.subsections %}
+  --- {{ sub.title }} ---
+  {{ sub.content[:1500] }}
+  {% endfor %}
+  {% endif %}
+
+  {% endfor %}
+  ----------------------------------------------------------------
+
+  Output only valid JSON:
+
+jinja_args:
+  - meta
+  - abstract
+  - sections

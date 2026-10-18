@@ -1,0 +1,10 @@
+# Separate environment for Stage 1 of the paper parser (LayoutLMv3 from PDF-Extract-Kit, detectron2).
+# Point RAP_LAYOUT_PYTHON at this environment's python; otherwise inference/layout_runtime.py creates it on first use.
+torch
+transformers==4.44.2
+huggingface-hub
+numpy<2
+opencv-python-headless<4.12
+pymupdf
+pillow
+git+https://github.com/facebookresearch/detectron2.git@1e3e13bbf607b54f62205c4c33922521822fb298

@@ -1,0 +1,189 @@
+system_prompt: |
+  You are an expert academic poster designer. Your task is to map the content
+  of a research paper into the slots of an existing poster template.
+  You do NOT design layout or CSS — the template's visual design is fixed.
+  You only decide WHAT TEXT goes into WHICH SLOT.
+
+template: |
+  ================================================================
+  CONTENT MAPPING TASK
+  ================================================================
+  You have a research paper and an HTML poster template with fixed slots.
+  Your job: decide what paper content goes into each template slot.
+
+  The template's visual layout (CSS, colors, positions, sizes) is FIXED.
+  You only control the TEXT CONTENT that fills each slot.
+
+  ================================================================
+  PAPER CONTENT
+  ================================================================
+  Title: {{ meta.poster_title }}
+  Authors: {{ meta.authors }}
+  Affiliations: {{ meta.affiliations }}
+
+  Abstract:
+  {{ abstract }}
+
+  {% for section in sections %}
+  === {{ section.title }} (importance: {{ section.importance }}) ===
+  {{ section.content }}
+
+  {% endfor %}
+
+  AVAILABLE FIGURES:
+  {% for fig in figures %}
+  - Figure {{ fig.figure_id }}: {{ fig.caption[:200] }}
+    Paths: {{ fig.graphics_paths }}
+  {% endfor %}
+
+  AVAILABLE TABLES:
+  {% for tab in tables %}
+  - Table {{ tab.table_id }}: {{ tab.caption[:200] }}
+  {% endfor %}
+
+  RENDERED EQUATIONS & TABLES (pre-rendered as PNG images):
+  {% if rendered_equations_tables %}
+  These have been pre-rendered from LaTeX to PNG and can be placed in image slots:
+  {% for key in rendered_equations_tables %}
+  - {{ key }}
+  {% endfor %}
+  Use action "replace_rendered" with "rendered_key" to place one of these.
+  {% else %}
+  (none available)
+  {% endif %}
+
+  {% if raw_sections %}
+  ================================================================
+  DETAILED PAPER CONTENT (use for filling additional slots when summarized content is not enough)
+  ================================================================
+  {% for section in raw_sections %}
+  === {{ section.title }} ===
+  {{ section.content[:2000] }}
+  {% if section.subsections %}
+  {% for sub in section.subsections %}
+  --- {{ sub.title }} ---
+  {{ sub.content[:1000] }}
+  {% endfor %}
+  {% endif %}
+
+  {% endfor %}
+  {% endif %}
+
+  ================================================================
+  TEMPLATE SLOTS
+  ================================================================
+  The poster template has these slots. Each slot has a fixed position,
+  size, and font size. You must fill text slots with appropriate content.
+
+  {{ slots_summary }}
+
+  ================================================================
+  MAPPING RULES
+  ================================================================
+
+  For each slot, output one of these actions:
+
+  1. "replace_text" — Fill with new text from the paper.
+     - The text MUST fit the slot's capacity (see chars_per_line × max_lines).
+     - For title slots: use a SHORT section title (e.g. "Introduction", "Method", "Results").
+     - For plain text slots: write poster-appropriate content (bullet points, concise summaries).
+     - Use bullet points (•) for body text where appropriate.
+     - Include key equations, findings, or numbers.
+     - Do NOT exceed the slot's character capacity — count carefully.
+     - If the slot is small (< 3 lines), keep the text very brief.
+
+  2. "replace_image" — Replace with a figure from the paper.
+     - Only for image-like slots.
+     - Specify which figure_id to use.
+     - Choose figures that match the slot's aspect ratio.
+
+  2b. "replace_rendered" — Replace with a pre-rendered equation or table image.
+     - For image slots where an equation or table would be appropriate.
+     - Specify "rendered_key" (e.g. "equation_1", "table_1").
+     - Great for slots that originally contained formulas or tables.
+
+  3. "keep" — Keep the original template content unchanged.
+     - ONLY use for purely decorative elements (borders, dividers, background panels).
+     - NEVER use "keep" for image slots that contain figures, charts, formulas, or any
+       academic content — those belong to a DIFFERENT paper and MUST be replaced or cleared.
+
+  4. "clear" — Make the slot empty/invisible.
+     - ONLY for image-like slots where no matching paper figure is available.
+     - NEVER use "clear" on text-like slots. Every text slot MUST receive content.
+
+  IMPORTANT GUIDELINES:
+  - The FIRST title slot (lowest data_position with label="title") should get the paper title.
+  - The author/affiliation slot should get the paper's authors and affiliations.
+  - Respect the poster's positional conventions: slots in the header band take the paper's title/authors; the
+    top row of body slots takes motivation and problem statement; the middle rows take the method; the bottom
+    rows take results, takeaways and conclusions (use each slot's (left,top) position to decide).
+  - Map the most important paper sections to the LARGEST text slots.
+  - CRITICAL: Every text-like slot MUST use "replace_text". No exceptions.
+    Do NOT use "clear" or "keep" on any text-like slot.
+  - CRITICAL: For image-like slots, you MUST either:
+    (a) "replace_image" with a paper figure (PREFERRED — use as many paper figures as possible), or
+    (b) "replace_rendered" with a pre-rendered equation or table, or
+    (c) "clear" if no suitable figure exists AND label="abandon".
+    NEVER use "keep" on image slots — the template images are from a different paper!
+  - Try to use ALL available paper figures. Match them by semantic relevance:
+    - "figure" slots → main result figures, framework diagrams, qualitative comparisons
+    - "table" slots → result tables or comparison charts
+    - "isolate_formula" slots → replace with a paper figure, or clear if no match
+  - Use at least 4-6 different figures from the paper to fill image slots.
+  - Text length is CRITICAL: if a slot fits ~5 lines of 50 chars, write ~250 chars max.
+  - Section headers (title slots inside columns, not the poster title) should be SHORT: 1-3 words.
+
+  CONTENT DISTRIBUTION RULES:
+  - NEVER leave any text-like slot empty. Every text slot must have "replace_text".
+  - If there are more text slots than paper sections, you MUST fill the extra slots by:
+    (a) Splitting longer sections across multiple slots (e.g. Method → "Method Overview" + "Method Details")
+    (b) Expanding bullet points with more specific details, numbers, or examples
+    (c) Adding content from the abstract, related work, or detailed paper content below
+    (d) Creating "Key Findings", "Contributions", "Future Work" sections from available content
+  - Distribute content EVENLY across all columns — avoid leaving any column sparse.
+  - Use the DETAILED PAPER CONTENT section below for additional material when needed.
+
+  ================================================================
+  OUTPUT FORMAT
+  ================================================================
+  Output a JSON object:
+  {
+    "slot_mappings": [
+      {
+        "block_id": "blk-XXXX",
+        "action": "replace_text",
+        "new_text": "The actual text content to put in this slot"
+      },
+      {
+        "block_id": "blk-YYYY",
+        "action": "replace_image",
+        "figure_id": 1
+      },
+      {
+        "block_id": "blk-AAAA",
+        "action": "replace_rendered",
+        "rendered_key": "equation_1"
+      },
+      {
+        "block_id": "blk-ZZZZ",
+        "action": "keep"
+      },
+      {
+        "block_id": "blk-WWWW",
+        "action": "clear"
+      }
+    ]
+  }
+
+  You MUST include a mapping for EVERY slot listed above.
+  Output only valid JSON:
+
+jinja_args:
+  - meta
+  - abstract
+  - sections
+  - figures
+  - tables
+  - slots_summary
+  - rendered_equations_tables
+  - raw_sections

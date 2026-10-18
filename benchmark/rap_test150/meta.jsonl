@@ -1,0 +1,150 @@
+{"paper_id": "NeurIPS_2023_72958", "title": "Gaussian Membership Inference Privacy", "domain": "AI Safety & Alignment", "n_assets": 8}
+{"paper_id": "NeurIPS_2022_63389", "title": "Optimized Global Perturbation Attacks For Brain Tumour ROI Extraction From Binary Classiﬁcation Models", "domain": "AI for Health & Social Sciences", "n_assets": 4}
+{"paper_id": "ICML_2023_24975", "title": "Conformal inference is (almost) free for neural networks trained with early stopping", "domain": "AI Safety & Alignment", "n_assets": 11}
+{"paper_id": "NeurIPS_2022_53009", "title": "LOT: Layer-wise Orthogonal Training on Improving ℓ2 Certiﬁed Robustness", "domain": "AI Safety & Alignment", "n_assets": 8}
+{"paper_id": "ICLR_2022_6391", "title": "PROOF ARTIFACT CO-TRAINING FOR THEOREM PROVING WITH LANGUAGE MODELS", "domain": "AI for Natural Sciences", "n_assets": 4}
+{"paper_id": "ICLR_2023_10740", "title": "REGRESSION WITH LABEL DIFFERENTIAL PRIVACY", "domain": "AI Safety & Alignment", "n_assets": 10}
+{"paper_id": "NeurIPS_2025_19909", "title": "Semantic Representation Attack against Aligned Large Language Models", "domain": "AI Safety & Alignment", "n_assets": 11}
+{"paper_id": "ICLR_2022_6934", "title": "BAYESIAN FRAMEWORK FOR GRADIENT LEAKAGE", "domain": "AI Safety & Alignment", "n_assets": 13}
+{"paper_id": "ICLR_2025_13120", "title": "Scalable Influence and Fact Tracing for Large Language Model Pretraining", "domain": "AI Safety & Alignment", "n_assets": 6}
+{"paper_id": "NeurIPS_2024_12977", "title": "Unconditional stability of a recurrent neural circuit implementing divisive normalization", "domain": "AI for Health & Social Sciences", "n_assets": 7}
+{"paper_id": "ICML_2025_12839", "title": "Sparse Autoencoders for Hypothesis Generation", "domain": "AI for Health & Social Sciences", "n_assets": 9}
+{"paper_id": "ICML_2023_24890", "title": "Sliced-Wasserstein on Symmetric Positive Definite Matrices for M/EEG Signals", "domain": "AI for Health & Social Sciences", "n_assets": 8}
+{"paper_id": "ICLR_2024_22560", "title": "What Causes Polysemanticity? An Alternative Origin Story of Mixed Selectivity from Incidental Causes", "domain": "AI Safety & Alignment", "n_assets": 12}
+{"paper_id": "ICML_2022_17111", "title": "Continuous-Time Modeling of Counterfactual Outcomes Using Neural Controlled Differential Equations", "domain": "AI for Health & Social Sciences", "n_assets": 11}
+{"paper_id": "ICLR_2023_10772", "title": "COMPUTATIONAL LANGUAGE ACQUISITION WITH THEORY OF MIND", "domain": "AI for Health & Social Sciences", "n_assets": 9}
+{"paper_id": "ICLR_2024_18123", "title": "DIFFEOMORPHIC MESH DEFORMATION VIA EFFICIENT OPTIMAL TRANSPORT FOR CORTICAL SURFACE RECONSTRUCTION", "domain": "AI for Health & Social Sciences", "n_assets": 9}
+{"paper_id": "ICML_2024_35045", "title": "CHEMREASONER: Heuristic Search over a Large Language Model’s Knowledge Space using Quantum-Chemical Feedback", "domain": "AI for Natural Sciences", "n_assets": 8}
+{"paper_id": "ICLR_2022_7211", "title": "INVERSE ONLINE LEARNING: UNDERSTANDING NON-STATIONARY AND REACTIONARY POLICIES", "domain": "AI for Health & Social Sciences", "n_assets": 11}
+{"paper_id": "ICML_2022_16741", "title": "LIMO: Latent Inceptionism for Targeted Molecule Generation", "domain": "AI for Natural Sciences", "n_assets": 12}
+{"paper_id": "ICML_2023_24898", "title": "STRIDERNET: A GRAPH REINFORCEMENT LEARNING APPROACH TO OPTIMIZE ATOMIC STRUCTURES ON ROUGH ENERGY LANDSCAPES", "domain": "AI for Natural Sciences", "n_assets": 8}
+{"paper_id": "ICML_2025_11946", "title": "Physics-Informed Generative Modeling of Wireless Channels", "domain": "AI for Natural Sciences", "n_assets": 10}
+{"paper_id": "ICML_2025_5665", "title": "Improving Out-of-Distribution Detection via Dynamic Covariance Calibration", "domain": "AI Safety & Alignment", "n_assets": 16}
+{"paper_id": "ICML_2023_24471", "title": "Omnipredictors for Constrained Optimization", "domain": "Fairness & Social Impact", "n_assets": 3}
+{"paper_id": "NeurIPS_2025_17956", "title": "Unlocking hidden biomolecular conformational landscapes in diffusion models at inference time", "domain": "AI for Natural Sciences", "n_assets": 8}
+{"paper_id": "NeurIPS_2023_73474", "title": "AbdomenAtlas-8K: Annotating 8,000 CT Volumes for Multi-Organ Segmentation in Three Weeks", "domain": "AI for Health & Social Sciences", "n_assets": 13}
+{"paper_id": "ICLR_2023_12207", "title": "IS SYNTHETIC DATA FROM GENERATIVE MODELS READY FOR IMAGE RECOGNITION?", "domain": "Data-centric ML & Evaluation", "n_assets": 6}
+{"paper_id": "ICLR_2025_2828", "title": "NeuroLM: A Universal Multi-task Foundation Model for Bridging the Gap between Language and EEG Signals", "domain": "AI for Health & Social Sciences", "n_assets": 15}
+{"paper_id": "ICLR_2023_10687", "title": "HUMAN-GUIDED FAIR CLASSIFICATION FOR NATURAL LANGUAGE PROCESSING", "domain": "Fairness & Social Impact", "n_assets": 5}
+{"paper_id": "NeurIPS_2025_1862", "title": "FreshStack: Building Realistic Benchmarks for Evaluating Retrieval on Technical Documents", "domain": "Data-centric ML & Evaluation", "n_assets": 6}
+{"paper_id": "ICML_2024_32881", "title": "TIMEX++: Learning Time-Series Explanations with Information Bottleneck", "domain": "AI Safety & Alignment", "n_assets": 10}
+{"paper_id": "ICLR_2025_10636", "title": "HR-Extreme: A High-Resolution Dataset for Extreme Weather Forecasting", "domain": "AI for Natural Sciences", "n_assets": 7}
+{"paper_id": "NeurIPS_2025_27970", "title": "Deep Compositional Phase Diffusion for Long Motion Sequence Generation", "domain": "Computer Vision", "n_assets": 9}
+{"paper_id": "ICLR_2025_3941", "title": "Rethinking Fair Representation Learning for Performance-Sensitive Tasks", "domain": "Fairness & Social Impact", "n_assets": 8}
+{"paper_id": "NeurIPS_2022_65643", "title": "MITIGATING DATASET BIAS BY USING PER-SAMPLE GRADIENT", "domain": "Fairness & Social Impact", "n_assets": 8}
+{"paper_id": "ICML_2023_25032", "title": "2D-Shapley: A Framework for Fragmented Data Valuation", "domain": "Data-centric ML & Evaluation", "n_assets": 10}
+{"paper_id": "ICML_2025_3448", "title": "Stay-Positive: A Case for Ignoring Real Image Features in Fake Image Detection", "domain": "Computer Vision", "n_assets": 14}
+{"paper_id": "NeurIPS_2022_62787", "title": "A Generalized Framework for Microstructural Optimization using Neural Networks", "domain": "AI for Natural Sciences", "n_assets": 16}
+{"paper_id": "ICLR_2023_11128", "title": "BRIDGING THE GAP TO REAL-WORLD OBJECT-CENTRIC LEARNING", "domain": "Computer Vision", "n_assets": 12}
+{"paper_id": "ICML_2022_16583", "title": "Adaptive Second Order Coresets for Data-efﬁcient Machine Learning", "domain": "Data-centric ML & Evaluation", "n_assets": 12}
+{"paper_id": "NeurIPS_2024_1093", "title": "PertEval: Unveiling Real Knowledge Capacity of LLMs with Knowledge-Invariant Perturbations", "domain": "Data-centric ML & Evaluation", "n_assets": 11}
+{"paper_id": "ICLR_2022_6146", "title": "MEASURING THE INTERPRETABILITY OF UNSUPERVISED REPRESENTATIONS VIA QUANTIZED REVERSE PROBING", "domain": "Data-centric ML & Evaluation", "n_assets": 11}
+{"paper_id": "NeurIPS_2024_4032", "title": "DiffuLT: Diffusion for Long-tail Recognition Without External Knowledge", "domain": "Computer Vision", "n_assets": 12}
+{"paper_id": "ICML_2024_32777", "title": "Comparing Graph Transformers via Positional Encodings", "domain": "Graph & Relational Learning", "n_assets": 6}
+{"paper_id": "NeurIPS_2025_13601", "title": "Graph Diffusion that can Insert and Delete", "domain": "Graph & Relational Learning", "n_assets": 10}
+{"paper_id": "ICML_2022_16037", "title": "Sublinear-Time Clustering Oracle for Signed Graphs", "domain": "Graph & Relational Learning", "n_assets": 6}
+{"paper_id": "ICLR_2023_11036", "title": "CONTRANORM: A CONTRASTIVE LEARNING PERSPECTIVE ON OVERSMOOTHING AND BEYOND", "domain": "Graph & Relational Learning", "n_assets": 10}
+{"paper_id": "NeurIPS_2023_71240", "title": "PyNeRF: Pyramidal Neural Radiance Fields", "domain": "Computer Vision", "n_assets": 13}
+{"paper_id": "ICML_2023_26312", "title": "Adversarial Label Invariant Graph Data Augmentations for Out-of-Distribution Generalization", "domain": "Graph & Relational Learning", "n_assets": 7}
+{"paper_id": "ICML_2022_18243", "title": "Time Is MattEr: Temporal Self-supervision for Video Transformers", "domain": "Computer Vision", "n_assets": 11}
+{"paper_id": "ICLR_2022_6857", "title": "INFINITYGAN: TOWARDS INFINITE-PIXEL IMAGE SYNTHESIS", "domain": "Computer Vision", "n_assets": 13}
+{"paper_id": "NeurIPS_2022_55268", "title": "Controllable 3D Face Synthesis with Conditional Generative Occupancy Fields", "domain": "Computer Vision", "n_assets": 12}
+{"paper_id": "ICLR_2024_17697", "title": "CURRICULUM REINFORCEMENT LEARNING FOR QUANTUM ARCHITECTURE SEARCH UNDER HARDWARE ERRORS", "domain": "AI for Natural Sciences", "n_assets": 7}
+{"paper_id": "NeurIPS_2023_72310", "title": "Mobilizing Personalized Federated Learning in Infrastructure-Less and Heterogeneous Environments via Random Walk Stochastic ADMM", "domain": "ML Systems & Infrastructure", "n_assets": 6}
+{"paper_id": "ICML_2024_33568", "title": "KernelSHAP-IQ: Weighted Least Square Optimization for Shapley Interactions", "domain": "Fairness & Social Impact", "n_assets": 9}
+{"paper_id": "NeurIPS_2023_71660", "title": "Spectral Invariant Learning for Dynamic Graphs under Distribution Shifts", "domain": "Graph & Relational Learning", "n_assets": 8}
+{"paper_id": "ICLR_2024_18536", "title": "SIN3DM: LEARNING A DIFFUSION MODEL FROM A SINGLE 3D TEXTURED SHAPE", "domain": "Computer Vision", "n_assets": 13}
+{"paper_id": "NeurIPS_2022_55713", "title": "Breaking Bad: A Dataset for Geometric Fracture and Reassembly", "domain": "Data-centric ML & Evaluation", "n_assets": 16}
+{"paper_id": "ICLR_2024_19129", "title": "SIMPLICIAL REPRESENTATION LEARNING WITH NEURAL k-FORMS", "domain": "Graph & Relational Learning", "n_assets": 12}
+{"paper_id": "ICLR_2025_5006", "title": "Matcha: Mitigating Graph Structure Shifts with Test-Time Adaptation", "domain": "Graph & Relational Learning", "n_assets": 12}
+{"paper_id": "ICML_2025_10492", "title": "HyperIMTS: Hypergraph Neural Network for Irregular Multivariate Time Series Forecasting", "domain": "Graph & Relational Learning", "n_assets": 11}
+{"paper_id": "ICLR_2022_6282", "title": "FASTSHAP: REAL-TIME SHAPLEY VALUE ESTIMATION", "domain": "Fairness & Social Impact", "n_assets": 11}
+{"paper_id": "ICML_2022_16477", "title": "Fair Representation Learning through Implicit Path Alignment", "domain": "Fairness & Social Impact", "n_assets": 12}
+{"paper_id": "NeurIPS_2024_19659", "title": "SOI: Scaling Down Computational Complexity by Estimating Partial States of the Model", "domain": "ML Systems & Infrastructure", "n_assets": 13}
+{"paper_id": "ICML_2025_15371", "title": "The Disparate Benefits of Deep Ensembles", "domain": "Fairness & Social Impact", "n_assets": 13}
+{"paper_id": "NeurIPS_2024_10158", "title": "Controlling Counterfactual Harm in Decision Support Systems Based on Prediction Sets", "domain": "Fairness & Social Impact", "n_assets": 6}
+{"paper_id": "ICLR_2023_10924", "title": "FEDEXP: SPEEDING UP FEDERATED AVERAGING VIA EXTRAPOLATION", "domain": "ML Systems & Infrastructure", "n_assets": 8}
+{"paper_id": "NeurIPS_2025_15460", "title": "SORTeD Rashomon Sets of Sparse Decision Trees: Anytime Enumeration", "domain": "Fairness & Social Impact", "n_assets": 12}
+{"paper_id": "ICLR_2025_1274", "title": "SynCamMaster: Synchronizing Multi-Camera Video Generation from Diverse Viewpoints", "domain": "Computer Vision", "n_assets": 16}
+{"paper_id": "NeurIPS_2024_2384", "title": "GLBench: A Comprehensive Benchmark for Graph with Large Language Models", "domain": "Graph & Relational Learning", "n_assets": 8}
+{"paper_id": "ICLR_2024_17622", "title": "HOW REALISTIC IS YOUR SYNTHETIC DATA? CONSTRAINING DEEP GENERATIVE MODELS FOR TABULAR DATA", "domain": "Data-centric ML & Evaluation", "n_assets": 10}
+{"paper_id": "NeurIPS_2022_59916", "title": "torchode: A Parallel ODE Solver for PyTorch", "domain": "ML Systems & Infrastructure", "n_assets": 7}
+{"paper_id": "NeurIPS_2023_73521", "title": "OpenDataVal: a Unified Benchmark for Data Valuation", "domain": "Data-centric ML & Evaluation", "n_assets": 9}
+{"paper_id": "NeurIPS_2024_1855", "title": "cPAPERS: A Dataset of Situated and Multimodal Interactive Conversations in Scientific Papers", "domain": "Multimodal & Cross-modal Learning", "n_assets": 6}
+{"paper_id": "ICLR_2022_6999", "title": "THE INDUCTIVE BIAS OF IN-CONTEXT LEARNING: RETHINKING PRETRAINING EXAMPLE DESIGN", "domain": "NLP & LLMs", "n_assets": 5}
+{"paper_id": "ICML_2022_16627", "title": "Sketching Algorithms and Lower Bounds for Ridge Regression", "domain": "Optimization & Learning Theory", "n_assets": 4}
+{"paper_id": "NeurIPS_2022_54582", "title": "Look Around and Refer: 2D Synthetic Semantics Knowledge Distillation for 3D Visual Grounding", "domain": "Multimodal & Cross-modal Learning", "n_assets": 13}
+{"paper_id": "ICML_2025_186", "title": "Position: A Theory of Deep Learning Must Include Compositional Sparsity", "domain": "Optimization & Learning Theory", "n_assets": 6}
+{"paper_id": "NeurIPS_2024_12656", "title": "Multi-LLM Debate: Framework, Principals, and Interventions", "domain": "NLP & LLMs", "n_assets": 7}
+{"paper_id": "NeurIPS_2022_54170", "title": "Stability and Generalization for Markov Chain Stochastic Gradient Methods", "domain": "Optimization & Learning Theory", "n_assets": 6}
+{"paper_id": "ICML_2025_537", "title": "Faster and Stronger: When ANN-SNN Conversion Meets Parallel Spiking Calculation", "domain": "ML Systems & Infrastructure", "n_assets": 9}
+{"paper_id": "ICML_2022_16227", "title": "Geometric Multimodal Contrastive Representation Learning", "domain": "Multimodal & Cross-modal Learning", "n_assets": 14}
+{"paper_id": "ICML_2023_24585", "title": "Robust Collaborative Learning with Linear Gradient Overhead", "domain": "Optimization & Learning Theory", "n_assets": 5}
+{"paper_id": "ICML_2023_23747", "title": "Unit Scaling: Out-of-the-Box Low-Precision Training", "domain": "ML Systems & Infrastructure", "n_assets": 9}
+{"paper_id": "NeurIPS_2023_71868", "title": "Latent Diffusion for Language Generation", "domain": "NLP & LLMs", "n_assets": 11}
+{"paper_id": "NeurIPS_2025_27859", "title": "Diversity-Aware Policy Optimization for Large Language Model Reasoning", "domain": "NLP & LLMs", "n_assets": 9}
+{"paper_id": "ICML_2023_23710", "title": "Active causal structure learning with advice", "domain": "Probabilistic & Generative ML", "n_assets": 6}
+{"paper_id": "ICLR_2023_11797", "title": "CODE TRANSLATION WITH COMPILER REPRESENTATIONS", "domain": "NLP & LLMs", "n_assets": 9}
+{"paper_id": "NeurIPS_2023_72116", "title": "Fine-grained Late-interaction Multi-modal Retrieval for Retrieval Augmented Visual Question Answering", "domain": "Multimodal & Cross-modal Learning", "n_assets": 10}
+{"paper_id": "ICML_2023_25042", "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation", "domain": "NLP & LLMs", "n_assets": 9}
+{"paper_id": "ICLR_2024_17792", "title": "DIFFERENTIABLE LEARNING OF GENERALIZED STRUCTURED MATRICES FOR EFFICIENT DEEP NEURAL NETWORKS", "domain": "ML Systems & Infrastructure", "n_assets": 13}
+{"paper_id": "NeurIPS_2023_71621", "title": "Nearly Optimal VC-Dimension and Pseudo-Dimension Bounds for Deep Neural Network Derivatives", "domain": "Optimization & Learning Theory", "n_assets": 8}
+{"paper_id": "ICLR_2023_10778", "title": "TRAINING-FREE STRUCTURED DIFFUSION GUIDANCE FOR COMPOSITIONAL TEXT-TO-IMAGE SYNTHESIS", "domain": "Multimodal & Cross-modal Learning", "n_assets": 12}
+{"paper_id": "ICML_2022_17791", "title": "FEDNEST: Federated Bilevel, Minimax, and Compositional Optimization", "domain": "ML Systems & Infrastructure", "n_assets": 11}
+{"paper_id": "ICLR_2025_8842", "title": "ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement", "domain": "NLP & LLMs", "n_assets": 7}
+{"paper_id": "ICLR_2024_17388", "title": "AGENTBENCH: EVALUATING LLMS AS AGENTS", "domain": "NLP & LLMs", "n_assets": 7}
+{"paper_id": "ICML_2024_34819", "title": "HEXGEN: Generative Inference of Large Language Model over Heterogeneous Environment", "domain": "ML Systems & Infrastructure", "n_assets": 13}
+{"paper_id": "ICLR_2024_17833", "title": "MaGIC: Multi-modality Guided Image Completion", "domain": "Multimodal & Cross-modal Learning", "n_assets": 11}
+{"paper_id": "NeurIPS_2025_13812", "title": "Coupling Generative Modeling and an Autoencoder with the Causal Bridge", "domain": "Probabilistic & Generative ML", "n_assets": 6}
+{"paper_id": "NeurIPS_2025_5562", "title": "On the Robustness of Transformers against Context Hijacking for Linear Classification", "domain": "Optimization & Learning Theory", "n_assets": 9}
+{"paper_id": "ICLR_2025_7964", "title": "Expressivity of Neural Networks with Random Weights and Learned Biases", "domain": "Optimization & Learning Theory", "n_assets": 8}
+{"paper_id": "ICML_2025_123", "title": "Enhancing Target-unspecific Tasks through a Features Matrix", "domain": "Multimodal & Cross-modal Learning", "n_assets": 11}
+{"paper_id": "ICLR_2024_19336", "title": "A Policy Gradient Method for Confounded POMDPs", "domain": "Reinforcement Learning", "n_assets": 4}
+{"paper_id": "ICLR_2023_11929", "title": "Analyzing Tree Architectures in Ensembles via Neural Tangent Kernel", "domain": "Optimization & Learning Theory", "n_assets": 11}
+{"paper_id": "ICLR_2022_7081", "title": "GENERALIZATION OF NEURAL COMBINATORIAL SOLVERS THROUGH THE LENS OF ADVERSARIAL ROBUSTNESS", "domain": "Optimization & Learning Theory", "n_assets": 13}
+{"paper_id": "NeurIPS_2025_6018", "title": "Turning Sand to Gold: Recycling Data to Bridge On-Policy and Off-Policy Learning via Causal Bound", "domain": "Reinforcement Learning", "n_assets": 7}
+{"paper_id": "ICML_2024_34200", "title": "NExT-GPT: Any-to-Any Multimodal LLM", "domain": "Multimodal & Cross-modal Learning", "n_assets": 11}
+{"paper_id": "ICLR_2024_17732", "title": "ROBUSTIFYING AND BOOSTING TRAINING-FREE NEURAL ARCHITECTURE SEARCH", "domain": "Optimization & Learning Theory", "n_assets": 9}
+{"paper_id": "NeurIPS_2024_18820", "title": "Consistency Models for Scalable and Fast Simulation-Based Inference", "domain": "Probabilistic & Generative ML", "n_assets": 9}
+{"paper_id": "NeurIPS_2023_73528", "title": "KuaiSim: A Comprehensive Simulator for Recommender Systems", "domain": "Reinforcement Learning", "n_assets": 8}
+{"paper_id": "ICLR_2025_6671", "title": "A Conditional Independence Test in the Presence of Discretization", "domain": "Probabilistic & Generative ML", "n_assets": 6}
+{"paper_id": "ICML_2024_34044", "title": "On the Second-Order Convergence of Biased Policy Gradient Algorithms", "domain": "Reinforcement Learning", "n_assets": 3}
+{"paper_id": "NeurIPS_2024_12458", "title": "Randomized algorithms and PAC bounds for inverse reinforcement learning in continuous spaces", "domain": "Reinforcement Learning", "n_assets": 5}
+{"paper_id": "ICML_2024_34065", "title": "A Bias-Variance-Covariance Decomposition of Kernel Scores for Generative Models", "domain": "Probabilistic & Generative ML", "n_assets": 10}
+{"paper_id": "ICLR_2025_4462", "title": "Mask in the Mirror: Implicit Sparsification", "domain": "ML Systems & Infrastructure", "n_assets": 8}
+{"paper_id": "ICML_2022_17047", "title": "Examining Scaling and Transfer of Language Model Architectures for Machine Translation", "domain": "NLP & LLMs", "n_assets": 15}
+{"paper_id": "ICML_2023_26141", "title": "Context-Aware Self-Adaptation for Domain Generalization", "domain": "Representation & Transfer Learning", "n_assets": 10}
+{"paper_id": "ICLR_2022_6372", "title": "OPEN-VOCABULARY OBJECT DETECTION VIA VISION AND LANGUAGE KNOWLEDGE DISTILLATION", "domain": "Multimodal & Cross-modal Learning", "n_assets": 16}
+{"paper_id": "NeurIPS_2022_60497", "title": "Generative Posterior Networks for Approximately Bayesian Epistemic Uncertainty Estimation", "domain": "Probabilistic & Generative ML", "n_assets": 12}
+{"paper_id": "ICML_2025_8246", "title": "Adaptive Exploration for Multi-Reward Multi-Policy Evaluation", "domain": "Reinforcement Learning", "n_assets": 9}
+{"paper_id": "ICLR_2023_11744", "title": "STABLE TARGET FIELD FOR REDUCED VARIANCE SCORE ESTIMATION IN DIFFUSION MODELS", "domain": "Probabilistic & Generative ML", "n_assets": 10}
+{"paper_id": "ICLR_2024_17827", "title": "ENTROPY-MCMC: SAMPLING FROM FLAT BASINS WITH EASE", "domain": "Probabilistic & Generative ML", "n_assets": 12}
+{"paper_id": "ICML_2025_5862", "title": "Fast Large Language Model Collaborative Decoding via Speculation", "domain": "NLP & LLMs", "n_assets": 13}
+{"paper_id": "ICML_2025_1655", "title": "REG: Rectified Gradient Guidance for Conditional Diffusion Models", "domain": "Probabilistic & Generative ML", "n_assets": 16}
+{"paper_id": "NeurIPS_2022_53779", "title": "TaSIL: Taylor Series Imitation Learning", "domain": "Robotics & Embodied AI", "n_assets": 5}
+{"paper_id": "ICLR_2023_10930", "title": "A Simple Approach for Visual Rearrangement: 3D Mapping and Semantic Search", "domain": "Robotics & Embodied AI", "n_assets": 8}
+{"paper_id": "ICLR_2022_6185", "title": "EE-NET: EXPLOITATION-EXPLORATION NEURAL NETWORKS IN CONTEXTUAL BANDITS", "domain": "Reinforcement Learning", "n_assets": 8}
+{"paper_id": "ICML_2022_18241", "title": "Discovering Generalizable Spatial Goal Representations via Graph-based Active Reward Learning", "domain": "Robotics & Embodied AI", "n_assets": 9}
+{"paper_id": "ICLR_2023_11250", "title": "MAESTRO: OPEN-ENDED ENVIRONMENT DESIGN FOR MULTI-AGENT REINFORCEMENT LEARNING", "domain": "Reinforcement Learning", "n_assets": 11}
+{"paper_id": "ICML_2023_25114", "title": "Open-VCLIP: Transforming CLIP to an Open-vocabulary Video Model via Interpolated Weight Optimization", "domain": "Multimodal & Cross-modal Learning", "n_assets": 12}
+{"paper_id": "NeurIPS_2023_72642", "title": "Mitigating the Effect of Incidental Correlations on Part-based Learning", "domain": "Representation & Transfer Learning", "n_assets": 14}
+{"paper_id": "NeurIPS_2024_18482", "title": "Continual Learning with Global Alignment", "domain": "Representation & Transfer Learning", "n_assets": 12}
+{"paper_id": "NeurIPS_2022_53510", "title": "Palm up: Playing in the Latent Manifold for Unsupervised Pretraining", "domain": "Representation & Transfer Learning", "n_assets": 11}
+{"paper_id": "ICML_2025_8248", "title": "Proxy-FDA: Proxy-based Feature Distribution Alignment for Fine-tuning Vision Foundation Models without Forgetting", "domain": "Representation & Transfer Learning", "n_assets": 9}
+{"paper_id": "ICLR_2022_5928", "title": "MEMORY REPLAY WITH DATA COMPRESSION FOR CONTINUAL LEARNING", "domain": "Representation & Transfer Learning", "n_assets": 14}
+{"paper_id": "ICLR_2025_7620", "title": "Learning Structured Representations by Embedding Class Hierarchy with Fast Optimal Transport", "domain": "Representation & Transfer Learning", "n_assets": 13}
+{"paper_id": "NeurIPS_2025_27332", "title": "Memory-Integrated Reconfigurable Adapters: A Unified Framework for Settings with Multiple Tasks", "domain": "Representation & Transfer Learning", "n_assets": 12}
+{"paper_id": "ICLR_2022_6820", "title": "MaGNET: UNIFORM SAMPLING FROM DEEP GENERATIVE NETWORK MANIFOLDS WITHOUT RETRAINING", "domain": "Probabilistic & Generative ML", "n_assets": 12}
+{"paper_id": "ICLR_2023_11919", "title": "NERN - LEARNING NEURAL REPRESENTATIONS FOR NEURAL NETWORKS", "domain": "Representation & Transfer Learning", "n_assets": 14}
+{"paper_id": "ICML_2024_35033", "title": "A Probabilistic Approach to Learning the Degree of Equivariance in Steerable CNNs", "domain": "Representation & Transfer Learning", "n_assets": 13}
+{"paper_id": "ICML_2022_18069", "title": "Causal Imitation Learning under Temporally Correlated Noise", "domain": "Reinforcement Learning", "n_assets": 13}
+{"paper_id": "ICML_2023_25038", "title": "Context-Aware Bayesian Network Actor-Critic Methods for Cooperative Multi-Agent Reinforcement Learning", "domain": "Reinforcement Learning", "n_assets": 13}
+{"paper_id": "ICLR_2024_18728", "title": "UNIVERSAL HUMANOID MOTION REPRESENTATIONS FOR PHYSICS-BASED CONTROL", "domain": "Robotics & Embodied AI", "n_assets": 12}
+{"paper_id": "NeurIPS_2023_71285", "title": "Real-Time Motion Prediction via Heterogeneous Polyline Transformer with Relative Pose Encoding", "domain": "Robotics & Embodied AI", "n_assets": 10}
+{"paper_id": "ICML_2024_35042", "title": "Lyapunov-stable Neural Control for State and Output Feedback: A Novel Formulation", "domain": "Robotics & Embodied AI", "n_assets": 13}
+{"paper_id": "ICLR_2025_8089", "title": "NextBestPath: Efficient 3D Mapping of Unseen Environments", "domain": "Robotics & Embodied AI", "n_assets": 16}
+{"paper_id": "ICML_2025_6390", "title": "SOLD: Slot Object-Centric Latent Dynamics Models for Relational Manipulation Learning from Pixels", "domain": "Robotics & Embodied AI", "n_assets": 11}
+{"paper_id": "NeurIPS_2024_579", "title": "Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving", "domain": "Robotics & Embodied AI", "n_assets": 13}
+{"paper_id": "ICML_2023_25065", "title": "For Pre-Trained Vision Models in Motor Control, Not All Policy Learning Methods are Created Equal", "domain": "Robotics & Embodied AI", "n_assets": 11}
+{"paper_id": "NeurIPS_2023_76110", "title": "zephyr : Stitching Heterogeneous Training Data with Normalizing Flows for Photometric Redshift Inference", "domain": "AI for Natural Sciences", "n_assets": 9}
+{"paper_id": "ICML_2025_282", "title": "Position: Causal Machine Learning Requires Rigorous Synthetic Experiments for Broader Adoption", "domain": "Data-centric ML & Evaluation", "n_assets": 0}

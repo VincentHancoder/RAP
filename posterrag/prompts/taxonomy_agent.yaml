@@ -1,0 +1,31 @@
+system_prompt: |
+  You are a careful academic paper analyst. You classify a paper into a fixed three-level taxonomy and distil its
+  introduction into a structured narrative summary. Answer with strict JSON only.
+
+template: |
+  PAPER
+  Title: {{ title }}
+  Abstract: {{ abstract }}
+  Section titles: {{ section_titles }}
+  Introduction (may be truncated):
+  {{ introduction }}
+
+  TAXONOMY (choose exactly one value per level, copied verbatim)
+  Domain:
+  {% for d in domains %}- {{ d }}
+  {% endfor %}
+  Task:
+  {% for t in tasks %}- {{ t }}
+  {% endfor %}
+  Method:
+  {% for m in methods %}- {{ m }}
+  {% endfor %}
+
+  TASK
+  1. Pick the single best domain, task and method label.
+  2. Write an introduction summary of 120-200 words covering, in this order: motivation, problem formulation,
+     key insight, claimed contributions. Describe the narrative logic (what gap is identified, how it is framed,
+     what the paper proposes), not the topic keywords.
+
+  Return only:
+  {"domain": "...", "task": "...", "method": "...", "intro_summary": "..."}

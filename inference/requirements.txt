@@ -1,0 +1,10 @@
+torch>=2.9
+transformers==5.2.0
+accelerate>=1.10
+flash-linear-attention==0.5.2
+fla-core==0.5.2
+huggingface_hub>=0.35
+pymupdf>=1.26
+pillow>=11
+beautifulsoup4>=4.13
+playwright==1.58.0

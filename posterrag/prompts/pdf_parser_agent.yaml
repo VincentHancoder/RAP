@@ -1,0 +1,60 @@
+system_prompt: |
+  You are an expert academic paper analyst. Your task is to read a markdown
+  representation of a research paper (extracted from PDF) and reorganize it
+  into a concise, well-structured JSON format suitable for academic poster generation.
+
+  You must preserve the key findings, methods, and conclusions while condensing
+  the content to poster-appropriate length.
+
+template: |
+  ================================================================
+  INSTRUCTIONS
+  ================================================================
+  Below is the markdown content extracted from a research paper PDF. Your job is to:
+
+  1. Extract the paper's metadata (title, authors, affiliations).
+  2. Identify and extract the abstract.
+  3. Review all sections and determine which are most important for a poster.
+  4. Condense each section's content to poster-appropriate length (50-200 words per section).
+  5. Preserve key technical details, results, and conclusions.
+  6. Make sure to include: Title & Authors, Introduction/Motivation, Method, Results, Conclusion.
+  7. Keep content factual — do not add information not in the paper.
+  8. Create short section titles (1-4 words each).
+
+  Output a JSON object with this structure:
+  {
+    "meta": {
+      "poster_title": "Full paper title",
+      "authors": "Author names",
+      "affiliations": "Affiliations"
+    },
+    "abstract": "The paper's abstract text",
+    "sections": [
+      {
+        "title": "Section Title",
+        "content": "Condensed content for this section...",
+        "importance": "high/medium/low"
+      }
+    ]
+  }
+
+  GUIDELINES:
+  - The first section should always be "Introduction" or "Motivation"
+  - Include 5-8 sections total
+  - Mark sections as "high" importance if they contain key results or methods
+  - Mark "medium" for supporting content, "low" for background/related work
+  - For the content field, use concise bullet-point style where appropriate
+  - Preserve specific numbers, metrics, and key equations mentioned in text
+  - If authors or affiliations are unclear from the text, make your best guess
+    based on any available information (email domains, headers, etc.)
+
+  ----------------------------------------------------------------
+  PAPER CONTENT (Markdown extracted from PDF):
+  ----------------------------------------------------------------
+  {{ markdown_content }}
+  ----------------------------------------------------------------
+
+  Output only valid JSON:
+
+jinja_args:
+  - markdown_content

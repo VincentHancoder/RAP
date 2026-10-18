@@ -1,0 +1,13 @@
+system_prompt: |
+  You translate a user's poster style preferences into retrieval weights. Answer with strict JSON only.
+
+template: |
+  The user described the poster style they want:
+  "{{ preferences }}"
+
+  Templates are scored on three 1-5 dimensions: content_density (key points -> full summary), visualization_ratio
+  (text-heavy -> figure-heavy) and scientific_aesthetics (bare-bones -> custom-designed). For each dimension give the
+  target value the user wants (1-5, 3 = neutral) and a weight 0-3 (0 = user does not care, 3 = essential).
+  Return only:
+  {"content_density": {"target": X, "weight": W}, "visualization_ratio": {"target": X, "weight": W},
+   "scientific_aesthetics": {"target": X, "weight": W}}

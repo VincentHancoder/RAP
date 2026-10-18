@@ -1,0 +1,209 @@
+You are an HTML/CSS reconstruction expert. Your goal: make the rendered HTML look **identical** to the attached reference image.
+
+## Inputs
+1. **Reference image** (attached) — this is the ground truth. Every visual decision you make must come from carefully observing this image.
+2. Layout boxes with bounding-box coordinates and labels (JSON below).
+3. Scaffold HTML with blocks already positioned at correct absolute coordinates.
+
+## Canvas: {width} × {height} px — do NOT change.
+
+## Layout
+```json
+{layout_json}
+```
+
+## Design specification (apply VERBATIM per region)
+The JSON below is the canonical design intent extracted from the reference
+image by an upstream design-captioning stage. When present, treat each
+region's tokens as binding constraints — choose CSS that matches the
+listed `composition / visual_anchor / flow / interaction / density /
+color_scheme / typography / emphasis / decoration` exactly, and use the
+global `palette / decorations / typography_family` for page-wide
+treatments. Each region supplies free-form `notes` / `design_caption` —
+use these to disambiguate when a token has multiple plausible CSS
+realisations. When `outer_bbox` is absent (free-form captioning mode),
+infer region boundaries by identifying which layout blocks share the same
+section header / card border, then compute the enclosing rectangle as
+min(left)/min(top)/max(right)/max(bottom) of those blocks ± 8-16 px
+padding. Prefer the design spec over your own interpretation of the image
+when the two conflict. If the value is `(none)`, fall back to inferring
+everything from the reference image as before.
+
+```json
+{design_spec}
+```
+
+## Dimension → CSS mapping
+The following maps each design dimension to recommended CSS techniques.
+When a region's design token is set, use the corresponding CSS patterns
+as the primary implementation strategy:
+
+{dimension_css_hints}
+
+## Font-size hints
+Lines tagged "[measured by OCR]" give a deterministic value from
+crop_height/n_lines and should be used as the **target** font-size
+(small ±1-2px tweaks are OK only if the line clearly overflows).
+Lines without that tag are heuristic ranges derived from the bbox height.
+{font_hints}
+
+## Rules
+
+### Geometry (NEVER change)
+- Every block's left/top/width/height is locked. Do NOT modify.
+- Do NOT add, remove, or reorder block <div> elements. Keep all block ids.
+- Canvas/body/html must stay exactly {width}×{height}px.
+
+### Image blocks (kind="image-like")
+- Keep <img> tags and src attributes exactly as provided.
+
+### Text blocks (kind="text-like") — LOOK AT THE REFERENCE IMAGE CAREFULLY
+For **each** text block, zoom into its bounding-box region in the reference image and:
+1. **Read the exact text** — reproduce every word, number, symbol, capitalisation, punctuation, and line break exactly as shown. Do NOT guess or paraphrase.
+   - If the text block contains **math formulas / equations / symbols** (e.g. Greek letters, superscripts, subscripts, fractions, operators, parentheses), keep them consistent with the reference image as well.
+   - Treat formulas as part of the original content, not optional decoration.
+2. **Match the font style** — observe whether it is serif, sans-serif, monospace, or decorative. Set font-family accordingly.
+3. **Match the font size** — make the text size adapt to the bounding box:
+   - If the block has an OCR-measured hint above ("[measured by OCR]"),
+     use that exact value as the target font-size.
+   - Otherwise treat the heuristic hint as a target range; pick the largest
+     value that still fully fits the box.
+   - The text should be as large as possible while still fully fitting inside the box.
+   - Aim for the text to visually occupy most of the bbox, rather than looking tiny.
+   - If a line can be larger without overflow, enlarge it.
+4. **Match the font weight and style** — bold, semi-bold, normal, italic, etc.
+5. **Match the text colour** — pick the exact colour from the image (e.g. white text on dark background, dark text on light background, coloured headings).
+6. **Match alignment** — left, center, right, or justified as shown.
+7. **Match line spacing** — set line-height to visually match the reference.
+
+Place text inside each block's `.content` node only.
+Define per-block styles in `#dynamic-style` with id selectors, e.g. `#blk-0001 .content { ... }`.
+Use CSS so text sizing is stable and contained inside the bbox, for example with careful `font-size`, `line-height`, `letter-spacing`, `padding: 0`, and `overflow: hidden` only as a last resort.
+If text overflows, reduce font-size or line-height — NEVER change block geometry.
+Do NOT make the text unnecessarily small. Prefer the largest size that still fits cleanly.
+- HTML can render formulas using normal text, Unicode math symbols, `<sup>`, `<sub>`, nested `<span>`, inline tables, and careful CSS alignment. Use these tools when needed.
+- Do NOT omit formulas. Do NOT simplify equations. Keep mathematical structure, symbols, and relative visual layout as close as possible to the reference image.
+- Different blocks must stay visually separated. Content from one block must never spill into or overlap another block.
+- When two blocks are close, prioritize keeping every block's content strictly inside its own bbox, even if that requires slightly tighter typography.
+
+### Visual elements — observe the reference image
+Reproduce using CSS:
+- Background colours/gradients (page-level on #canvas, block-level on blocks).
+- Borders, divider lines, separators.
+- Decorative shapes, header bars, coloured strips, shadows, outlines.
+Use background, border, box-shadow, border-radius, linear-gradient, ::before/::after in #dynamic-style.
+
+### Group B — Region & Global background containers (READ CAREFULLY)
+
+When the design spec sets any of the following, you MUST add extra `<div>`
+elements **inside `#canvas`**. These are separate from the scaffold block
+divs — do NOT modify the scaffold block divs themselves.
+
+**Trigger conditions:**
+- `global.decorations` includes `solid_block_carrier` or `thin_divider_lines`
+- any region's `interaction` value is NOT `flat_inline`
+- any region's `decoration` value is NOT `border_none_shadow`
+
+**GLOBAL decoration divs** — insert BEFORE all scaffold block divs:
+
+```html
+<!-- solid_block_carrier: full-width header or footer strip -->
+<div style="position:absolute; left:0; top:0; width:100%; height:Hpx;
+            background:<primary-color>; z-index:0;"></div>
+
+<!-- thin_divider_lines: hairline rule between sections -->
+<div style="position:absolute; left:Xpx; top:Ypx; width:Wpx; height:1px;
+            background:<divider-color>; z-index:3;"></div>
+```
+
+**REGION background container divs** — insert PER SECTION before that section's block divs:
+
+```html
+<!-- outer coloured/bordered container (z-index 0) -->
+<div id="region-R-XX-bg" style="
+  position:absolute; left:Xpx; top:Ypx; width:Wpx; height:Hpx;
+  background:<primary or transparent>;
+  border-radius:<0px for square | 8-16px for rounded>;
+  border:<none | 1-2px solid color>;
+  z-index:0;
+"></div>
+
+<!-- inner white content area — only when design_caption describes nested white box (z-index 1) -->
+<div id="region-R-XX-inner" style="
+  position:absolute; left:X2px; top:Y2px; width:W2px; height:H2px;
+  background:#FFFFFF;
+  border-radius:<0px for square | 8px for rounded>;
+  z-index:1;
+"></div>
+```
+
+Then add `z-index:2` to every scaffold block `<div>` that falls inside this
+region, so content appears above the background layers.
+
+**How to determine coordinates:** Use `min(left)/min(top)/max(right)/max(bottom)`
+of the region's layout blocks ± 8-16 px padding.
+
+**`interaction: solid_carrier`** — add a thick coloured title strip at the TOP
+of the container (full width, ≈30-50 px tall) as a sub-div or thick top-border.
+
+**`interaction: offset_underlay`** — shift the bg div 4-8 px right and down
+relative to the content blocks.
+
+**Nested structure** — if `design_caption` describes an outer coloured frame
+AND an inner white box, create two background divs: outer at z-index 0, inner
+white at z-index 1, scaffold content blocks at z-index 2.
+
+### Group A — Per-dimension CSS checklist
+
+Apply the following CSS rules in `#dynamic-style` on the relevant block divs,
+according to each region's design tokens.
+
+**`color_scheme` (neutral_palette / warm_palette / cool_palette)**
+Use the hex values from `global.palette` (`primary`, `accent`, `surface`, `foreground`):
+- `surface`    → `#canvas` background-color; region background-color
+- `primary`    → section title bars, borders, bullets, icon badges
+- `accent`     → highlighted keywords, call-out boxes, active indicators
+- `foreground` → body text color, section header text on light bg
+
+**`composition` (grid_2col / grid_3col / flex_row / flex_col / absolute_overlap)**
+Scaffold blocks are already absolutely positioned, so reflect composition via
+content alignment and visual grouping:
+- `grid_2col` / `grid_3col` — ensure left-column blocks share the same left
+  edge and right-column blocks share the same left edge; align tops
+- `flex_row` — blocks on the same horizontal baseline; align vertical centres
+- `flex_col` — blocks stacked; consistent left margins and top spacings
+- `absolute_overlap` — one block intentionally overlaps another; use z-index to
+  bring the foreground element forward
+
+**`flow` (z_pattern / f_pattern / top_down / left_right)**
+- Reflect reading order via DOM ordering of scaffold block divs
+- Optionally add small numbered step badges
+  (`position:absolute; z-index:5; width:20px; height:20px; border-radius:50%`)
+  without changing block geometry
+
+**`visual_anchor` (scale_dominant / weight_dominant / contrast_dominant / isolated_focal)**
+- `scale_dominant`    → largest `font-size` in the region; optionally `transform:scale(1.05)`
+- `weight_dominant`   → `font-weight:800` on the anchor block title
+- `contrast_dominant` → high-contrast color (e.g. white text on `primary` bg)
+- `isolated_focal`    → generous `padding` around the anchor, reduced text density nearby
+
+**`density` (airy / balanced / dense)**
+- `airy`     → `padding:20-32px` inside blocks, `line-height:1.8`, `letter-spacing:0.04em`
+- `balanced` → `padding:12-16px`, `line-height:1.5`
+- `dense`    → `padding:4-8px`, `line-height:1.3`, tighter letter-spacing
+
+**`typography` (sans_modern / serif_classic / mono_technical)**
+- `sans_modern`    → `font-family:'Helvetica Neue',Arial,sans-serif`; weights 700/400
+- `serif_classic`  → `font-family:Georgia,'Times New Roman',serif`; weights 700/400
+- `mono_technical` → `font-family:'Courier New',Courier,monospace`; weights 700/400
+- Always maintain a clear weight hierarchy: title (800) → subheading (600) → body (400)
+
+**`emphasis` (bold_caps / color_tint / icon_prefix / highlight_bg)**
+- `bold_caps`    → `font-weight:800; text-transform:uppercase` on key phrases/headings
+- `color_tint`   → `color:<accent>` on key phrases via `<span>` wrappers
+- `icon_prefix`  → `::before { content:'▶ '; color:<accent>; }` on list items
+- `highlight_bg` → `background:<accent>30; border-radius:3px; padding:0 4px` on key phrases
+
+### Output
+- Return complete HTML (<!doctype html> to </html>). No markdown fences, no explanations.
+- No <script> tags, no external URLs.

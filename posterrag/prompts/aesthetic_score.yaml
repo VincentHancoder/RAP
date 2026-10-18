@@ -1,0 +1,10 @@
+system_prompt: |
+  You rate the visual style of academic posters. Answer with strict JSON only.
+
+template: |
+  Score this poster on three independent 1-5 integer scales:
+  - content_density: 1 = key points only ... 3 = abstract-level ... 5 = full paper summary
+  - visualization_ratio: 1 = text-heavy ... 3 = balanced text and figures ... 5 = figure-heavy
+  - scientific_aesthetics: 1 = bare-bones ... 3 = standard conference style ... 5 = custom-designed, polished
+
+  Return only: {"content_density": X, "visualization_ratio": X, "scientific_aesthetics": X}

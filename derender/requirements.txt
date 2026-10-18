@@ -1,0 +1,11 @@
+# main environment (Stages 2-4): PaddleOCR, MLLM clients, rendering
+paddlepaddle>=2.6          # or paddlepaddle-gpu
+paddleocr>=2.7,<3
+anthropic>=0.40
+openai>=1.50
+pillow>=11
+numpy
+scikit-image
+playwright==1.58.0
+huggingface_hub>=0.35
+# Stage 1 (LayoutLMv3 / detectron2) runs in the layout environment: ../inference/requirements-layout.txt
