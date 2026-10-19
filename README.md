@@ -17,6 +17,7 @@
 <sub><sup>1</sup> Tsinghua University &nbsp;&nbsp; <sup>2</sup> Meituan Longcat &nbsp;&nbsp; <sup>3</sup> The University of Hong Kong &nbsp;&nbsp; <sup>4</sup> University of Washington</sub>
 <br><sub><sup>∗</sup> Project lead &nbsp;&nbsp; <sup>†</sup> Corresponding author</sub>
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2610.23230-B31B1B?logo=arxiv&logoColor=fff)](https://arxiv.org/abs/2610.23230)
 [![Project Page](https://img.shields.io/badge/Project-Page-8A2BE2?logo=githubpages&logoColor=fff)](https://reconstruct-a-poster.github.io/)
 [![Dataset](https://img.shields.io/badge/Dataset-RAP--25K-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/VincentHancoder/RAP)
 [![Model](https://img.shields.io/badge/Model-RAP--Qwen3.8--27B--RL-FF9D00?logo=huggingface&logoColor=000)](https://huggingface.co/VincentHancoder/RAP-Qwen3.8-27B-RL)
@@ -135,10 +136,13 @@ for rendering. Third-party licenses are listed in [`docs/THIRD_PARTY_NOTICES.md`
 ## Citation
 
 ```bibtex
-@article{han2026rap,
-  title   = {RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars},
-  author  = {Han, Haonan and Lin, Yukang and Lin, Minliang and Tan, Haoxian and He, Jun-Yan and Yang, Rui and Cheng, Zhi-Qi and Hu, Jie and Wan, Guanglu and Li, Xiu},
-  year    = {2026},
-  note    = {Preprint}
+@misc{han2026rapdatasetpapertopostergeneration,
+      title={RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars},
+      author={Haonan Han and Yukang Lin and Minliang Lin and Haoxian Tan and Jun-Yan He and Rui Yang and Zhi-Qi Cheng and Jie Hu and Guanglu Wan and Xiu Li},
+      year={2026},
+      eprint={2610.23230},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.23230},
 }
 ```
