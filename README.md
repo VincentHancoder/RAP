@@ -135,6 +135,8 @@ for rendering. Third-party licenses are listed in [`docs/THIRD_PARTY_NOTICES.md`
 
 ## Citation
 
+If you find RAP useful or interesting for your research, please consider starring this repository and citing our paper.
+
 ```bibtex
 @misc{han2026rapdatasetpapertopostergeneration,
       title={RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars},
