@@ -24,6 +24,9 @@
 [![Demo](https://img.shields.io/badge/Demo-Hugging%20Face%20Space-blue?logo=huggingface&logoColor=fff)](https://huggingface.co/spaces/VincentHancoder/RAP)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
+<a href="https://github.com/VincentHancoder/RAP/blob/main/figures/rap_demo.mp4"><img src="figures/rap_demo_cover.jpg" width="100%" alt="RAP video demo (2:34)"></a>
+<sub>▶ <b>Video demo</b> · 2 min 34 s · click the cover to watch on GitHub, or <a href="https://github.com/VincentHancoder/RAP/raw/main/figures/rap_demo.mp4">download the MP4</a></sub>
+
 <img src="figures/teaser.png" width="100%" alt="RAP overview: dataset, poster derendering, data applications">
 
 </div>
